@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <div class="header">
+                <span class="badge">JsonPowerDB Micro Project</span>
+                <h1>Student Enrollment Form</h1>
+                <p>Student registration and record management using JsonPowerDB.</p>
+            </div>
+
+            <form id="studentForm" autocomplete="off">
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="rollNo">Roll-No</label>
+                        <input type="text" id="rollNo" name="Roll-No" placeholder="Enter roll number" maxlength="20">
+                    </div>
+
+                    <div class="field">
+                        <label for="fullName">Full-Name</label>
+                        <input type="text" id="fullName" name="Full-Name" placeholder="Enter full name" maxlength="100" disabled>
+                    </div>
+
+                    <div class="field">
+                        <label for="studentClass">Class</label>
+                        <input type="text" id="studentClass" name="Class" placeholder="e.g. B.Tech CSE" maxlength="50" disabled>
+                    </div>
+
+                    <div class="field">
+                        <label for="birthDate">Birth-Date</label>
+                        <input type="date" id="birthDate" name="Birth-Date" disabled>
+                    </div>
+
+                    <div class="field field-wide">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="Address" rows="3" placeholder="Enter complete address" maxlength="250" disabled></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label for="enrollmentDate">Enrollment-Date</label>
+                        <input type="date" id="enrollmentDate" name="Enrollment-Date" disabled>
+                    </div>
+                </div>
+
+                <div id="message" class="message" role="status"></div>
+
+                <div class="actions">
+                    <button type="button" id="saveBtn" class="btn primary" onclick="saveData()" disabled>Save</button>
+                    <button type="button" id="updateBtn" class="btn success" onclick="updateData()" disabled>Update</button>
+                    <button type="button" id="resetBtn" class="btn secondary" onclick="resetForm()" disabled>Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js?v=20261006-https"></script>
+</body>
+</html>
